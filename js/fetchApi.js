@@ -1,6 +1,6 @@
 document.getElementById('send').addEventListener('click', sendDataToServer);
 
-export function sendDataToServer(e) {
+export async function sendDataToServer(e) {
     e.preventDefault();
 
     const name = document.getElementById('nome').value;
@@ -17,7 +17,7 @@ export function sendDataToServer(e) {
         email,
         text
     }
-    fetch(`https://vidasaldavel-api.onrender.com/post/`, {
+    await fetch(`https://vidasaldavel-api.onrender.com/post/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
