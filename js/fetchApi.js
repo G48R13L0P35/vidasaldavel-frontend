@@ -17,7 +17,7 @@ export function sendDataToServer(e) {
         email,
         text
     }
-    fetch(`http://localhost:3333/post/`, {
+    fetch(`https://vidasaldavel-api.onrender.com/post/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
